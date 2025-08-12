@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="w3-css-modal.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  
+
 
 </head>
 
@@ -22,7 +22,7 @@
   <span id="top-code"></span>
 
   <div id="full-content">
-
+     
     <div id="arrow-container">
       <a href="#home"><span id="profile"></span></a>
 
@@ -34,19 +34,19 @@
 
     <div id="center-content">
         <div id="bg-image" translate="no"> </div>
-      <div id="home" class="timeline"></div>
-      <div id="print" class="timeline"></div>
-      <div id="web" class="timeline"></div>
-      <div id="code" class="timeline"></div>
-      <div id="marketing" class="timeline"></div>
-      <div id="genAI" class="timeline"></div>
+      <div id="home" class="timeline-container"></div>
+      <div id="print" class="timeline-container"></div>
+      <div id="web" class="timeline-container"></div>
+      <div id="code" class="timeline-container"></div>
+      <div id="marketing" class="timeline-container"></div>
+      <div id="genAI" class="timeline-container"></div>
     </div>
     <!--end center content-->
   </div>
   <!--end of full-content-->
 
 </body>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
 
 <script type="text/javascript">
 //jquery below 
@@ -60,7 +60,7 @@
     $("#genAI").load("html-content/genAI.html");
 
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 50) {
+      if ($(this).scrollTop() > 80) {
         $('#arrow-container').fadeOut();
       } else {
         $('#arrow-container').fadeIn();
@@ -83,7 +83,6 @@
     
     });
 
-
-</script>
+</script> 
 
 </html>

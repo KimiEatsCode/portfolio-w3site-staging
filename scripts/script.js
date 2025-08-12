@@ -108,8 +108,8 @@ document.querySelector('#left-arrow').addEventListener('click', function(event) 
   console.log('Button clicked, scrolling prevented.');
 });
 
-//event to id menu to scroll to home
-document.getElementById("menu").addEventListener("click",  function(event) {
-  event.preventDefault();
-  document.getElementById("home").scrollIntoView();
-});
+   //event click on marketing-goback X on project page scroll marketing into view
+// document.getElementById("marketing-goback").addEventListener("click",  function(event) {
+//   event.preventDefault();
+//   document.getElementById("marketing").scrollIntoView();
+// });
