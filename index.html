@@ -33,13 +33,16 @@
     </div>
 
     <div id="center-content">
+      <div id="myButton"><button>go right</button></div>
         <div id="bg-image" translate="no"> </div>
-      <div id="home" class="timeline-container"></div>
+        <div id="htmlFile">
+      <!-- <div id="home" class="timeline-container"></div> -->
+      <!-- <div id="home" class="timeline-container"></div>
       <div id="print" class="timeline-container"></div>
       <div id="web" class="timeline-container"></div>
       <div id="code" class="timeline-container"></div>
       <div id="marketing" class="timeline-container"></div>
-      <div id="genAI" class="timeline-container"></div>
+      <div id="genAI" class="timeline-container"></div> -->
     </div>
     <!--end center content-->
   </div>
@@ -52,13 +55,8 @@
 //jquery below 
   $(document).ready(function () {
 
-    $("#home").load("html-content/home.html");
-    $("#print").load("html-content/print.html");
-    $("#web").load("html-content/web.html");
-    $("#code").load("html-content/code.html");
-    $("#marketing").load("html-content/marketing.html");
-    $("#genAI").load("html-content/genAI.html");
-
+    $("#htmlFile").load("html-content/home.html");
+  
     $(window).scroll(function () {
       if ($(this).scrollTop() > 80) {
         $('#arrow-container').fadeOut();
@@ -80,8 +78,16 @@
           $('.back-up-link').css('display', 'none');
         }
       });
-    
     });
+
+
+$(window).on('resize', function() {
+  $("#myButton")[0].scrollIntoView();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 </script> 
 
