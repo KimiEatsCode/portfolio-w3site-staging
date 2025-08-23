@@ -1,0 +1,104 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sarah Kimi Rettig Portfolio">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Sarah Kimi Rettig">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../w3-css-modal.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+     <span id="top-core-values"></span>
+
+ <div class="project-page-heading">
+
+  <h1>Company Core Values</h1>
+ 
+</div>
+
+<div id="project-center-content">
+       
+<div id="project-core-values" class="timeline">
+
+  <span id="anchor-core-values"></span>
+  <div class="project-content">
+  <h2></h2>
+  <h3></h3>
+  <p></p>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
+<div class="project-content feature-image">
+  <a href="./projects/brand-refresh-assets/brand-refresh-1.png" target="_blank" class="image-url">view full image</a></span>
+</div>
+
+<div class="project-content">The core values committee, made up of staff members and the human resources team, conducted a company-wide survey to come up with four core values. Staff worked on a hybrid schedule so displaying the core values both virtually and physically was important. The committee wanted a design that could be translated to different mediums, such as zoom backgrounds and mouse pads, to help promote the core values across the company.</div>
+<div class="project-content">I was the lead graphic and print designer on this project. I worked with the communications director and a contract designer to use new brand colors created as part of the department's brand refresh. I met with the HR department and members of the core values committee to review and iterate on design artwork.</div>
+
+<div class="project-content">The challenge of this project was more about stakeholder alignment than about design. Since the design needed to be reviewed by a committee of staff members and the human resources team, getting feedback and final review took a couple months. The project also started during the holidays when many people were out on vacation. Initial feedback was given to my manager by the committee so I was not able to respond directly. Communication became easier once the HR director created a Teams chat channel where stakeholders could chat about the final design at their leisure.</div>
+
+<div class="project-content">After a few iterations, the final design defined the four core values in white text against PhilaWorks new softer, cooler brand colors. Definitions of the core values were trimmed down and icons were simplified after a few iterations. The final work were vector assets including a vector logo that could be easily reused and resized for any core value project from wall decals to mouse pads.</div>
+
+</div><!--end of project-brand-refresh and timeline-->
+</div><!--end of project center content -->
+
+<div class="backup-container">
+  <a href="#top-core-values"><span class="back-up-link"></span></a>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../scripts/script.js"></script>
+
+<script type="text/javascript">
+//jquery below 
+/* jquery on page not importing js into file because want jquery to load with page not after */
+
+  $(document).ready(function () {
+
+ $(".project-content.feature-image").css("background", "url('/projects/core-values-assets/core-values-1.png')");
+
+  $("#modal-core-values").css("background-color", "#4caf50");
+
+/*    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+
+    console.log("results " + results);
+*/
+    //hide menu on scroll down
+   /*  $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $('#arrow-container').fadeOut();
+      } else {
+        $('#arrow-container').fadeIn();
+      };
+    }) 
+      */
+
+    //prevent horizontal scroll on scroll down
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        document.getElementById("project-center-content").style.overflowX = "hidden";
+      } 
+      });
+
+    //display back up icon on scroll down
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('.back-up-link').css('display', 'block');
+        } else {
+          $('.back-up-link').css('display', 'none');
+        }
+      });
+    
+    });
+
+
+</script> 
