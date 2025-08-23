@@ -34,6 +34,8 @@ const categories = ["graphic design","digital marketing","web design","web devel
 
 const apps = ["Adobe Photoshop", "Adobe Illustrator","Canva Design","Front-End Development"];
 
+const html_files = ["home.html", "print.html", "web.html", "code.html", "marketing.html", "genAI.html"];
+
 // why is 3%6 equal 3?
 
 // The modulo operator, often represented by the symbol %, gives the remainder of a division. It essentially tells you what's left over after dividing one number by another. For example, 7 modulo 3 (written as 7 % 3) equals 1, because 7 divided by 3 is 2 with a remainder of 1. 
@@ -78,19 +80,93 @@ function getPrevFileName() {
   return files[prevIndex];
 }
 
+//fetch the HTML file in html content folder based on the current index
+//parse the html
+//innerHTML the parsed content into the div with id htmlFile
+
+async function getCurrentHtmlFileName() {
+  const currentHtmlFileName = html_files[currIndex];
+  console.log(`Current HTML file name: ${currentHtmlFileName}`);
+  try {
+    const response = await fetch(`../../html-content/${currentHtmlFileName}`);
+    const html = await response.text();
+
+    // Initialize the DOM parser
+    const parser = new DOMParser();
+
+    // Parse the text
+    const doc = parser.parseFromString(html, "text/html");
+    console.log('doc -- ' + doc);
+
+    // You can now even select part of that html as you would in the regular DOM
+    // Example:
+    // Use the current file name (without extension) as the selector
+    const sectionId = currentHtmlFileName.replace('.html', '');
+    const docArticle = doc.querySelector(`#${sectionId}`);
+
+    console.log(docArticle);
+
+    if (docArticle) {
+      document.getElementById("htmlFile").innerHTML = docArticle.innerHTML;
+    } else {
+      document.getElementById("htmlFile").innerHTML = "<p>Section not found.</p>";
+    }
+  } catch (error) {
+    console.error('Failed to fetch page: ', error);
+  }
+}
+
+//fetch the HTML file name based on the current index
+async function getPrevHtmlFileName() {
+  const prevHtmlFileName = html_files[currIndex];
+  console.log(`Current HTML file name: ${prevHtmlFileName}`);
+  try {
+    const response = await fetch(`../../html-content/${prevHtmlFileName}`);
+    const html = await response.text();
+
+    // Initialize the DOM parser
+    const parser = new DOMParser();
+
+    // Parse the text
+    const doc = parser.parseFromString(html, "text/html");
+    console.log('doc -- ' + doc);
+
+    // You can now even select part of that html as you would in the regular DOM
+    // Example:
+    // Use the current file name (without extension) as the selector
+    const sectionId = prevHtmlFileName.replace('.html', '');
+    const docArticle = doc.querySelector(`#${sectionId}`);
+
+    console.log(docArticle);
+
+    if (docArticle) {
+      document.getElementById("htmlFile").innerHTML = docArticle.innerHTML;
+    } else {
+      document.getElementById("htmlFile").innerHTML = "<p>Section not found.</p>";
+    }
+  } catch (error) {
+    console.error('Failed to fetch page: ', error);
+  }
+}
+
+//mouse over go to load next content category html
+  document.getElementById('myButton').addEventListener('mouseover', function() {
+    scrollRight();
+        console.log('Mouse is over the button!');
+    });
 
 function scrollRight() {
   let nextIndex = getNextFileName();
-  document.getElementById(nextIndex).scrollIntoView();
-  // Change the background color from colors array 
+  // document.getElementById(nextIndex).scrollIntoView();
+  getCurrentHtmlFileName();
   document.body.style.backgroundColor = colors[files.indexOf(nextIndex)];
   colors[files.indexOf(nextIndex)];
 }
 
 function scrollLeft() {
   let prevIndex = getPrevFileName();
-  document.getElementById(prevIndex).scrollIntoView();
-  // Change the background color from colors array
+  // document.getElementById(prevIndex).scrollIntoView();
+  getPrevHtmlFileName();
   document.body.style.backgroundColor = colors[files.indexOf(prevIndex)];
 }
 
