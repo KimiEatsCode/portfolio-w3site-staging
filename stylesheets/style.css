@@ -1,0 +1,420 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,900,700,500);
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+/*import material symbols link below does not work
+/* @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"); */
+
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-page-heading h1,
+.project-page-heading h2 {
+  color: #000;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px 0;
+  list-style: disc;
+  margin-left: 17px;
+}
+
+li.list-icon {
+  list-style: "\e8f9";
+  font-family: "Material Icons Outlined";
+  color: #fff;
+}
+
+.backup-container a {
+  padding-right: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.back-up-link {
+  display: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.back-up-link::before {
+  content: "\e316";
+  font-family: "Material Icons Outlined";
+  font-size: 100px;
+}
+
+.home-page-heading {
+  padding-left: 0px;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  height: 100vh;
+  /* animation: fade-in 3s 3ms;
+  animation-fill-mode:forwards; */
+}
+
+.project-page-heading {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  /* height: 100vh; */
+  color: #000;
+  /* animation: fade-in 3s 3ms;
+  animation-fill-mode:forwards; */
+}
+
+.intro {
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: 400;
+    padding-right: 5%;
+    /* padding-left: 50px; */
+    color: #fff;
+    max-width: 80%;
+}
+
+.view-more-link span {
+  font-size: 25em;
+  color: #fff;
+  animation: pulse 2s 3ms;
+  animation-fill-mode: forwards;
+}
+
+.project-view-more-link span {
+  font-size: 18em;
+  color: #fff;
+  animation: pulse 2s 3ms;
+  animation-fill-mode: forwards;
+}
+
+.pulse {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-variation-settings: "wght" 100;
+  }
+  50% {
+    font-variation-settings: "wght" 300;
+  }
+  100% {
+    font-variation-settings: "wght" 100;
+  }
+}
+
+/* Define the animation */
+@keyframes fade-in {
+  0% {
+    transform: opacity(0);
+  }
+  25% {
+    transform: opacity(20%); /* Slightly scale up vertically */
+  }
+  50% {
+    transform: opacity(50%); /* Slightly scale up vertically */
+  }
+  100% {
+    transform: opacity(100%);
+  }
+}
+
+span.view-more-link {
+  font-size: 80px;
+  /* scroll-behavior: smooth; */
+  color: #fff;
+  /* animation: ease-scroll 5s; */
+}
+
+span.view-more-link:hover {
+  /* animation: ease-scroll 5s forwards; */
+  opacity: 80%;
+}
+
+span.project-view-more-link {
+  font-size: 80px;
+  /* scroll-behavior: smooth; */
+  color: #000;
+  animation: ease-scroll 5s;
+}
+
+span.project-view-more-link:hover {
+  /* animation: ease-scroll 5s forwards; */
+  opacity: 80%;
+}
+
+@keyframes ease-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Right side menu
+#arrow-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 68px;
+  height: 100%;
+  z-index: 999;
+  right: 0;
+  bottom: 0px;
+  background-color: #343434!important;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+#arrow-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* height: 100%; */
+  z-index: 999;
+  bottom: 0;
+  bottom: 0px;
+  background-color: #343434 !important;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#arrow-container > button {
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  width: 40px;
+  margin-left: 5px;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #343434;
+  /* writing-mode:vertical-lr; */
+}
+
+#arrow-container a {
+  text-decoration: none;
+}
+
+#profile::before {
+  content: "\e7fd";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #fff;
+  line-height: 1em;
+}
+
+#resume::before {
+  content: "\e873";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #fff;
+  line-height: 1em;
+}
+
+.project-content {
+  color: #000;
+  display: flex;
+  padding-left:50px;
+  width:80%;
+}
+
+.project-content.feature-image {
+  width: 100%;
+  height: 300px;
+  margin:70px 0px 20px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.image-url:after {
+  content: "\e89e";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #000;
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 60%;
+}
+
+a.image-url {
+    justify-content: right;
+    display: flex;
+    color: #fff;
+    margin-bottom:20px;
+}
+
+#htmlFile {
+  padding-left:50px;
+}
+
+#bg-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+#bg-image::before {
+  font-size: 34em;
+  content: "𛱔𛱕𛱖𛱗𛱘𛱙𛱚§𛱩𛱪𛱰𛱱𛱲𛱳𛱴𛰀𛰁𛰂𛰃𛰄𛰅𛰆𛲖𛲗𛲘𛲙𛰅𛰔𛱢𛱣𛱙𛱔𛱕𛱖𛱤𛱥§𛱦𛱧𛱨𛰀𛰁𛰑𛱔𛱕𛱖𛱗𛱘𛱙𛱩𛱪𛱰𛱱𛱲𛱳𛱴 𛰀𛰁𛰂𛰃𛰄𛰅𛰆𛲔𛲕𛲖𛲗𛲘𛲙𛰅𛰎𛰏𛰐𛰑𛰒𛰓 𛰔 𛱢𛱣𛱙𛱔𛱕𛱖𛱤𛱥𛱦𛱧𛱨𛰀𛰁𛰑";
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  letter-spacing: 22px;
+  line-height: 75px;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  
+}
+
+#center-content {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  flex-wrap: nowrap;
+  /* overflow-x: scroll; */
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 0;
+}
+
+#project-center-content {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 0;
+}
+
+
+#center-content button {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #000;
+  background-color:#fff;
+}
+
+button {
+  font-family: Roboto, sans-serif !important;
+  font-size: 15px;
+  margin: 0;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+button.w3-button.w3-black.w3-round-large {
+  background-color: #666 !important;
+}
+
+button.w3-button.w3-black.w3-round-large:after {
+  content: " ↗";
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  row-gap: 30px;
+  justify-content: flex-start;
+  flex: 0 0 100%;
+  width: 1100px;
+  padding-top: 30px;
+}
+
+.timeline-about {
+  color: #fff;
+  padding-right: 20%;
+    flex-direction: column;
+  padding-left: 50px;
+  justify-content: flex-start;
+  flex: 0 0 100%;
+  /* width: 1100px; */
+  padding-top: 30px;
+}
+
+.timeline-content {
+  color: #fff;
+  padding-right: 40%;
+}
+
+.timeline-project {
+  color: #fff;
+  padding-right: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .view-more-link span {
+    font-size: 18em;
+    color: #fff;
+    animation: pulse 2s 3ms;
+    animation-fill-mode: forwards;
+  }
+
+  .project-view-more-link span {
+    font-size: 18em;
+    color: #000;
+    animation: pulse 2s 3ms;
+    animation-fill-mode: forwards;
+  }
+}
