@@ -37,10 +37,14 @@
     </div>
 
     <div id="center-content">
-      <div id="snackbar-message"><button onclick="myFunction()">Best Viewing Guidelines</button>
-</div>
-<div id="snackbar">Best viewed at one browser window size. Resizing browser window will bring you to top of page.</div>
-        <div id="bg-image" translate="no"> </div>
+
+<!-- <div id="snackbar-message"><button onclick="myFunction()">Best Viewing Guidelines</button>
+</div> -->
+<!-- <div id="snackbar">Best viewed at one browser window size. Resizing browser window will bring you to top of page.</div> -->
+       
+<div id="bg-image" translate="no"> </div>
+<!--using translate no because text in background image needs to be non-translated -->
+
         <div id="htmlFile"></div>
   </div>
   <!--end of full-content-->
@@ -87,11 +91,11 @@ $(window).on('resize', function() {
   });
 });
 
-function myFunction() {
+/*function myFunction() {
   var x = document.getElementById("snackbar");
   x.className = "show";
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
+}*/
 
 </script> 
 
