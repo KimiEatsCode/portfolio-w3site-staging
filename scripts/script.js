@@ -11,9 +11,32 @@ const tags = ["graphic design","digital marketing","web design","web development
 
 const apps = ["Adobe Photoshop", "Adobe Illustrator","Canva Design","Front-End Development"];
 
+//refactor to populate array automatically when html files added to category-html-content folder
 const category_html_content = ["home.html", "print.html", "web.html", "code.html", "marketing.html", "genAI.html"];
 
-const project_html_content = ["brand-refresh.html", "core-values.html"];
+const project_html_content = ["brand-refresh.html", "core-values.html", "career-banner.html"];
+
+// AI created: Dynamically populate project_html_content array with file names from project-html-content folder
+// let project_html_content = [];
+
+// async function populateProjectHtmlContent() {
+//   try {
+//     // Fetch the folder listing (requires server-side support, e.g., an API or static JSON)
+//     const response = await fetch('../../project-html-content/index.json');
+//     if (!response.ok) throw new Error('Failed to fetch project HTML file list');
+//     project_html_content = await response.json();
+//     console.log('Loaded project_html_content:', project_html_content);
+//   } catch (error) {
+//     console.error('Error loading project HTML content:', error);
+//     // Fallback to hardcoded list if needed
+//     project_html_content = ["brand-refresh.html", "core-values.html", "career-banner.html"];
+//   }
+// }
+
+// Call this function on page load
+// populateProjectHtmlContent();
+
+//end AI help
 
 
 function getNextIndex(array) {
@@ -83,11 +106,10 @@ async function getCurrentHtmlFileName(setFileNameIndex) {
 
 //fetch project html content
 
-async function getProjectHtmlContent(setFileNameIndex) {
-console.log(project_html_content[0])
-  currIndex = 0;
-
-  let projectHtmlFile = project_html_content[0];
+async function getProjectHtmlContent(project_html_index) {
+console.log('project html content ' + project_html_content[project_html_index])
+ 
+  let projectHtmlFile = project_html_content[project_html_index];
 
   console.log(`Get project HTML file: ${projectHtmlFile}`);
 
@@ -186,6 +208,8 @@ document.querySelector('#left-arrow').addEventListener('click', scrollLeft, func
   // event.preventDefault(); 
   console.log('left arrow button clicked');
 });
+
+// const project_html_content = ["brand-refresh.html", "core-values.html, career-banner.html"];
 
 document.querySelector('#project-button-core-values').addEventListener('click', function(event) {
   event.preventDefault();
