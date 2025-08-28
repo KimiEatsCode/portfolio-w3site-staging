@@ -13,7 +13,7 @@ const apps = ["Adobe Photoshop", "Adobe Illustrator","Canva Design","Front-End D
 
 const category_html_content = ["home.html", "print.html", "web.html", "code.html", "marketing.html", "genAI.html"];
 
-const project_html_content = ["brand-refresh.html", "core-values.html"];
+const project_html_content = ["brand-refresh.html", "core-values.html", "career-banner.html"];
 
 
 function getNextIndex(array) {
@@ -84,10 +84,8 @@ async function getCurrentHtmlFileName(setFileNameIndex) {
 //fetch project html content
 
 async function getProjectHtmlContent(setFileNameIndex) {
-console.log(project_html_content[0])
-  currIndex = 0;
 
-  let projectHtmlFile = project_html_content[0];
+  let projectHtmlFile = project_html_content[setFileNameIndex];
 
   console.log(`Get project HTML file: ${projectHtmlFile}`);
 
