@@ -206,7 +206,7 @@ a.image-url {
 
 #htmlFile {
   padding-left:50px;
-  height:100vh;
+  /* height:100vh; caused jquery to not work on scroll */
 }
 
 #bg-image {
