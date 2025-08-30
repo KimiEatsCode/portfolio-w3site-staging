@@ -121,15 +121,7 @@ async function getProjectHtmlContent(setFileNameIndex) {
 
 //fetch the HTML file name based on the current index
 async function getPrevHtmlFileName(setFileNameIndex) {
-
-  
    let prevHtmlFileName = category_html_content[setFileNameIndex ?? currIndex];
-
-  // if(!setFileNameIndex) {
-  //     prevHtmlFileName = category_html_content[currIndex];
-  //   } else {
-  //     prevHtmlFileName = category_html_content[setFileNameIndex];
-  //   }
 
   try {
     const response = await fetch(`../../category-html-content/${prevHtmlFileName}`);
@@ -174,20 +166,24 @@ function scrollLeft() {
   // document.getElementById(prevIndex).scrollIntoView();
   getPrevHtmlFileName();
   document.body.style.backgroundColor = colors[categories.indexOf(prevIndex)];
-}5
+}
 
+/*adding click event listener to DOM elements for nav*/
 document.getElementById("right-arrow").addEventListener("click", scrollRight, function(event) {
-  // event.preventDefault();
+  event.preventDefault();
 });
 
+/*adding click event listener to DOM elements for nav*/
 document.querySelector('#left-arrow').addEventListener('click', scrollLeft, function(event) {
-  // event.preventDefault(); 
+  event.preventDefault(); 
   console.log('left arrow button clicked');
 });
 
+
+/**** Important to note: javascript to load project html content is actually in-line with html so it will load when the project html file loads - DomParser does not bring over script tag content****
 document.querySelector('#project-button-core-values').addEventListener('click', function(event) {
   event.preventDefault();
   getProjectHtmlContent(3);
   console.log('Button clicked core values project should pop up');
 });
-
+*/
