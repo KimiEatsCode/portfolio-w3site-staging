@@ -55,18 +55,21 @@
     $("#htmlFile").load("category-html-content/home.html");
   
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 80) {
+      if ($(this).scrollTop() > 50) {
+        console.log("scrolling");
         $('#arrow-container').fadeOut();
+         document.getElementById("center-content").style.overflowX = "hidden";
       } else {
         $('#arrow-container').fadeIn();
       };
     })
 
-    $(window).scroll(function () {
+  /*  $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
         document.getElementById("center-content").style.overflowX = "hidden";
       } 
       });
+      */
 
      $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
