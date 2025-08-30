@@ -118,8 +118,23 @@ li.list-icon {
 }
 
 .view-more-link .material-icons-outlined:hover {
-  opacity: 0.8;
-  color:#9D00FF;
+  color:#bb88da;
+  animation: pulse 0.8s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform-y:translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+      transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform-y:translateY(0);
+  }
 }
 
 #arrow-container {
