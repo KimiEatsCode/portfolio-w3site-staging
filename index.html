@@ -21,15 +21,25 @@
   <span id="top-genai"></span>
   <span id="top-code"></span>
 
+   <a href="#home"><span id="profile"></span></a>
+   <a href="./assets/Sarah_Kimi_Rettig_Resume_7-25-2025.pdf" target="_blank"><span id="resume"></span></a>
 
-    <div id="arrow-container">
+    <!-- <div id="arrow-container">
       <a href="#home"><span id="profile"></span></a>
-
       <a href="./assets/Sarah_Kimi_Rettig_Resume_7-25-2025.pdf" target="_blank"><span id="resume"></span></a>
       <button id="left-arrow">PREV</button>
       <button id="right-arrow">NEXT</button>
       </ul>
+    </div> -->
+    <div id="left-arrow-container">
+      <button id="left-arrow"></button>
     </div>
+
+    <div id="right-arrow-container">      
+      <button id="right-arrow"></button>
+    </div>
+
+       <div id="arrow-container"></div>
 
 <div id="center-content">
  
@@ -88,6 +98,16 @@ $(window).on('resize', function() {
   });
 });
 
+/*not sure if this is working*/
+/*$(".view-more-link").on("click", function(e) {
+  e.preventDefault();
+  var target = $(this.getAttribute('href'));
+  if (target.length) {
+    $("html, body").animate({
+      scrollBottom: target.offset().bottom
+    }, 5000);
+  }
+});*/
 </script> 
 
 </html>

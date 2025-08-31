@@ -152,7 +152,6 @@ async function getPrevHtmlFileName(setFileNameIndex) {
   }
 }
 
-
 function scrollRight() {
   let nextIndex = getNextFileName();
   // document.getElementById(nextIndex).scrollIntoView();
@@ -168,9 +167,54 @@ function scrollLeft() {
   document.body.style.backgroundColor = colors[categories.indexOf(prevIndex)];
 }
 
-/*adding click event listener to DOM elements for nav*/
-document.getElementById("right-arrow").addEventListener("click", scrollRight, function(event) {
+/* right mouse events listener to DOM elements for nav*/
+const rightArrow = document.getElementById("right-arrow");
+const rightArrowContainer = document.getElementById("right-arrow-container");
+
+rightArrow.addEventListener("click", function(event) {
   event.preventDefault();
+  scrollRight();
+});
+
+rightArrowContainer.addEventListener("click", function(event) {
+  event.preventDefault();
+  rightArrow.style.opacity = "0.7"; // Example hover effect
+  scrollRight();
+});
+
+rightArrowContainer.addEventListener("mouseenter", function(event) {
+  event.preventDefault();
+  rightArrowContainer.style.opacity = "0.7"; // Example hover effect
+});
+
+rightArrowContainer.addEventListener("mouseleave", function(event) {
+  event.preventDefault();
+  rightArrowContainer.style.opacity = "0.4"; // Example hover effect
+});
+
+/* left mouse events listener to DOM elements for nav*/
+const leftArrow = document.getElementById("left-arrow");
+const leftArrowContainer = document.getElementById("left-arrow-container");
+
+leftArrow.addEventListener("click", function(event) {
+  event.preventDefault();
+  scrollLeft();
+});
+
+leftArrowContainer.addEventListener("click", function(event) {
+  event.preventDefault();
+  leftArrow.style.opacity = "0.7"; // Example hover effect
+  scrollLeft();
+});
+
+leftArrowContainer.addEventListener("mouseenter", function(event) {
+  event.preventDefault();
+  leftArrowContainer.style.opacity = "0.7"; // Example hover effect
+});
+
+leftArrowContainer.addEventListener("mouseleave", function(event) {
+  event.preventDefault();
+  leftArrowContainer.style.opacity = "0.4"; // Example hover effect
 });
 
 /*adding click event listener to DOM elements for nav*/
