@@ -65,13 +65,105 @@ li.list-icon {
 }
 
 .backup-container a {
-  color:#9D00FF;
+  color:#fff;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+#right-arrow-container {
+  position:fixed;
+  right:0;
+    display: flex;
+    justify-self: flex-end;
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.4;
+    width: 50px;
+    top: 0;
+    position: fixed;
+}
+
+#left-arrow-container {
+      position: fixed;
+      left:0;
+    display: flex;
+    justify-self: flex-start;
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.4;
+      width: 50px;
+    top: 0;
+
+}
+
+button#right-arrow, button#left-arrow {
+  color:#000;
+  background:0;
+  border:none;
+}
+
+button#right-arrow::after {
+    position: absolute;
+    content: "\e5cc";
+    font-family: "Material Icons Outlined";
+    font-size: 10em;
+    margin-left: 8px;
+    right: -40px;
+    bottom: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    top: 200px;
+}
+
+button#left-arrow::after {
+    position: absolute;
+    content: "\e5cb";
+    font-family: "Material Icons Outlined";
+    font-size: 10em;
+    margin-left: 8px;
+    left: -40px;
+    bottom: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    top: 200px;
+}
+
+
+/* 
+#arrow-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  background-color: #afafaf !important;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+} */
+/* 
+#arrow-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  border-radius: 10px;
+  width: 100px;
+  margin-left: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  color: #888;
+} */
+
+#arrow-container a {
   text-decoration: none;
 }
 
 .backup-container {
   float:right;
-  padding-right: 20px;
+  padding-right: 90px;
   text-decoration: none;
 }
 
@@ -108,7 +200,7 @@ li.list-icon {
     line-height: 30px;
     font-weight: 400;
     padding-right: 5%;
-    /* padding-left: 50px; */
+    padding-left: 50px;
     color: #fff;
     max-width: 80%;
 }
@@ -138,36 +230,6 @@ li.list-icon {
   }
 }
 
-#arrow-container {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  width: 100%;
-  z-index: 999;
-  bottom: 0;
-  background-color: #afafaf !important;
-  padding: 10px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-#arrow-container > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border:none;
-  border-radius: 10px;
-  width: 100px;
-  margin-left: 5px;
-  background-color: #fff;
-  font-weight: bold;
-  color: #888;
-}
-
-#arrow-container a {
-  text-decoration: none;
-}
 
 #profile::before {
   content: "\e7fd";
@@ -221,7 +283,7 @@ a.image-url {
 }
 
 #htmlFile {
-  padding-left:50px;
+  padding-left:130px;
   /* height:100vh; caused jquery to not work on scroll */
 }
 
@@ -328,17 +390,79 @@ button.w3-button.w3-black.w3-round-large:after {
   padding-right: 40%;
 }
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) { */
+@media only screen and (max-width: 748px) {
 
-  #htmlFile {
-  padding-left:5%;
+#htmlFile {
+  padding-left:25%;
 }
 
 .timeline-about {
   padding-right:0;
+  padding-left: 0;
 }
 
+.intro {
+  padding-left:0;
+}
 .view-more-link span {
   font-size: 18em;
 }
+
+button#right-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 50%;
+}
+
+button#right-arrow::after {
+  content: "\e5cc";
+  color:#fff;
+  font-family: "Material Icons Outlined";
+  font-size: 10em;
+  margin-left: 8px;
+  color: inherit;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  height: 100vh;
+  text-align:center;
+}
+
+/* #arrow-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  background-color: #afafaf !important;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#arrow-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  border-radius: 10px;
+  width: 100px;
+  margin-left: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  color: #888;
+}
+
+#arrow-container a {
+  text-decoration: none;
+} */
+
 }
