@@ -29,7 +29,7 @@
       </ul>
     </div> -->
 
-    <div id="arrow-container">
+  
     <div id="left-arrow-container">
       <button id="left-arrow"></button>
     </div>
@@ -37,7 +37,7 @@
     <div id="right-arrow-container">      
       <button id="right-arrow"></button>
     </div>
-   </div>
+
 
 <div id="center-content">
  
@@ -65,21 +65,24 @@
     $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
         console.log("scrolling");
-        $('#arrow-container').fadeOut();
+        $('#left-arrow-container').fadeOut();
          document.getElementById("center-content").style.overflowX = "hidden";
       } else {
-        $('#arrow-container').fadeIn();
+        $('#left-arrow-container').fadeIn();
       };
     })
 
-  /*  $(window).scroll(function () {
+        $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
-        document.getElementById("center-content").style.overflowX = "hidden";
-      } 
-      });
-  */
+        console.log("scrolling");
+        $('#right-arrow-container').fadeOut();
+         document.getElementById("center-content").style.overflowX = "hidden";
+      } else {
+        $('#right-arrow-container').fadeIn();
+      };
+    })
 
-     $(window).scroll(function () {
+         $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
           $('.back-up-link').css('display', 'block');
         } else {
@@ -88,13 +91,22 @@
       });
     });
 
-$(window).on('resize', function() {
+
+
+  /*  $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        document.getElementById("center-content").style.overflowX = "hidden";
+      } 
+      });
+  */
+
+/*$(window).on('resize', function() {
   $("#myButton")[0].scrollIntoView();
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-});
+});*/
 
 /*not sure if this is working*/
 /*$(".view-more-link").on("click", function(e) {
