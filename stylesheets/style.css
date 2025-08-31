@@ -173,6 +173,10 @@ button#left-arrow::after {
   font-size: 100px;
 }
 
+#htmlFile {
+  padding-left:130px;
+}
+
 .home-page-heading {
   text-align:left;
 }
@@ -305,7 +309,7 @@ a.image-url {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  text-align:center;
+  text-align:left;
   scroll-behavior: smooth;
   scroll-padding-block-start: 0;
 }
@@ -393,6 +397,9 @@ button.w3-button.w3-black.w3-round-large:after {
   padding: 0 15%;
 }
 
+#center-content {
+  text-align:center;
+}
 
 .timeline-content{
   padding:0 20%;
