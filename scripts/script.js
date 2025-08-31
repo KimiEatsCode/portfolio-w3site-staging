@@ -218,10 +218,10 @@ leftArrowContainer.addEventListener("mouseleave", function(event) {
 });
 
 /*adding click event listener to DOM elements for nav*/
-document.querySelector('#left-arrow').addEventListener('click', scrollLeft, function(event) {
-  event.preventDefault(); 
-  console.log('left arrow button clicked');
-});
+// document.querySelector('#left-arrow').addEventListener('click', scrollLeft, function(event) {
+//   event.preventDefault(); 
+//   console.log('left arrow button clicked');
+// });
 
 
 /**** Important to note: javascript to load project html content is actually in-line with html so it will load when the project html file loads - DomParser does not bring over script tag content****
