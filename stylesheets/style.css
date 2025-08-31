@@ -308,7 +308,6 @@ a.image-url {
 #center-content {
   display: flex;
   flex-direction: row;
-  width: 100vw;
   flex-wrap: nowrap;
   /* overflow-x: scroll; */
   scroll-behavior: smooth;
