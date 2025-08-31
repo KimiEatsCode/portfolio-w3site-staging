@@ -279,7 +279,7 @@ a.image-url {
 }
 
 #htmlFile {
-  padding-left:80px;
+  padding-left:0px;
   /* height:100vh; caused jquery to not work on scroll */
 }
 
@@ -395,7 +395,6 @@ button.w3-button.w3-black.w3-round-large:after {
 .page-heading {
   display: flex;
   flex-direction: column;
-  padding: 0 20%;
   height: 100vh;
   text-align: center;
 }
