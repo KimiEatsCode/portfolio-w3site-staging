@@ -202,7 +202,7 @@ button#left-arrow::after {
     font-weight: 400;
     padding-right: 5%;
     color: #fff;
-    /* max-width: 80%; */
+    max-width: 60%;
 }
 
 .view-more-link span {
@@ -310,6 +310,7 @@ a.image-url {
   flex-direction: row;
   flex-wrap: nowrap;
   text-align:left;
+  height:100vh;
   scroll-behavior: smooth;
   scroll-padding-block-start: 0;
 }
@@ -361,9 +362,9 @@ button.w3-button.w3-black.w3-round-large:after {
 
 .timeline-about {
   color: #fff;
-  padding-right: 20%;
-    flex-direction: column;
-  padding-left: 100px;
+  /* padding-right: 20%; */
+  flex-direction: column;
+  /* padding-left: 100px; */
   justify-content: flex-start;
   flex: 0 0 100%;
   padding-top: 30px;
@@ -383,12 +384,19 @@ button.w3-button.w3-black.w3-round-large:after {
   padding-right: 40%;
 }
 
-/* @media only screen and (max-width: 1000px) { */
-@media only screen and (max-width: 748px) {
+@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 748px) { */
 
 #htmlFile {
     padding:0;
-  }
+}
+
+.backup-container {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  padding-right: 0;
+}
 
 .page-heading {
   display: flex;
