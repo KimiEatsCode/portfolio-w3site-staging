@@ -353,20 +353,26 @@ a.image-url {
     height:40px;
 }
 
+#center-content button a {
+  text-decoration: none;
+  color: #000;
+}
+
+#center-content button:after {
+    content: "\e89e";
+    font-family: "Material Icons Outlined";
+    font-size: 1.3em;
+    margin-left: 5px;
+    vertical-align: text-bottom;
+}
+
+
 button {
   font-family: Roboto, sans-serif !important;
   font-size: 15px;
   margin: 0;
   border-radius: 15px;
   padding: 5px 10px;
-}
-
-button.w3-button.w3-black.w3-round-large {
-  background-color: #666 !important;
-}
-
-button.w3-button.w3-black.w3-round-large:after {
-  content: " ↗";
 }
 
 .timeline-container {
@@ -423,10 +429,24 @@ button.w3-button.w3-black.w3-round-large:after {
   flex-direction: column;
   height: 100vh;
   text-align: center;
+  animation: fade-in 2s ease-in;
 }
 
 .home-page-heading {
   padding: 0 15%;
+  animation: fade-in 0.2s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity:20%;
+  }
+  50% {
+    opacity:70%;
+  }
+  100% {
+    opacity:100%;
+  }
 }
 
 #center-content {
