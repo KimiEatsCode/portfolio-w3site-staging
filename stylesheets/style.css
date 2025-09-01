@@ -88,13 +88,13 @@ li.list-icon {
       left:0;
     display: flex;
     justify-self: flex-start;
-    background-color: #fff;
+    background-color: #ccc;
     height: 100vh;
     opacity: 0.4;
       width: 50px;
     top: 0;
-
 }
+
 
 button#right-arrow, button#left-arrow {
   color:#000;
@@ -427,7 +427,7 @@ button {
 .page-heading {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   animation: fade-in 2s ease-in;
 }
@@ -464,53 +464,44 @@ button {
   font-size: 18em;
 }
 
-/* 
-button#right-arrow {
-  position: absolute;
-  right: 10px;
+#left-arrow-container {
+    position: fixed;
+    left: 0;
+    background-color: #ccc;
+    height: 70px;
+    width: 50%;
+    bottom: 0;
+    top:unset;
 }
 
-button#right-arrow::after {
-  content: "\e5cc";
-  color:#fff;
-  font-family: "Material Icons Outlined";
-  font-size: 8em;
-  margin-left: 8px;
-  color: inherit;
-  display: inline-block;
-  vertical-align: middle;
-} */
-
-
-/* #arrow-container {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  width: 100%;
-  z-index: 999;
-  bottom: 0;
-  background-color: #afafaf !important;
-  padding: 10px;
-  flex-wrap: wrap;
-  gap: 10px;
+ button#left-arrow::after {
+    position: absolute;
+    content: "\e5cb";
+    font-family: "Material Icons Outlined";
+    font-size: 5em;
+    left:0;
+    top: unset;
+    bottom:0;  
 }
 
-#arrow-container > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border:none;
-  border-radius: 10px;
-  width: 100px;
-  margin-left: 5px;
-  background-color: #fff;
-  font-weight: bold;
-  color: #888;
+#right-arrow-container {
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    height: 70px;
+    width: 50%;
+    bottom: 0;
+    top:unset;
 }
 
-#arrow-container a {
-  text-decoration: none;
-} */
+ button#right-arrow::after {
+    position: absolute;
+    content: "\e5cc";
+    font-family: "Material Icons Outlined";
+    font-size: 5em;
+    right: 0;
+    bottom:0;
+    top: unset;
 
+}
 }
