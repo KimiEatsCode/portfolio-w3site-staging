@@ -168,61 +168,28 @@ function scrollLeft() {
 }
 
 /* right mouse events listener to DOM elements for nav*/
-const rightArrow = document.getElementById("right-arrow");
 const rightArrowContainer = document.getElementById("right-arrow-container");
 
-rightArrow.addEventListener("click", function(event) {
-  event.preventDefault();
-  scrollRight();
-});
-
 rightArrowContainer.addEventListener("click", function(event) {
-  event.preventDefault();
-  rightArrow.style.opacity = "0.7"; // Example hover effect
+  // event.preventDefault();
   scrollRight();
 });
 
-rightArrowContainer.addEventListener("mouseenter", function(event) {
-  event.preventDefault();
-  rightArrowContainer.style.opacity = "0.7"; // Example hover effect
-});
-
-rightArrowContainer.addEventListener("mouseleave", function(event) {
-  event.preventDefault();
-  rightArrowContainer.style.opacity = "0.4"; // Example hover effect
-});
 
 /* left mouse events listener to DOM elements for nav*/
-const leftArrow = document.getElementById("left-arrow");
 const leftArrowContainer = document.getElementById("left-arrow-container");
 
-leftArrow.addEventListener("click", function(event) {
-  event.preventDefault();
-  scrollLeft();
-});
-
 leftArrowContainer.addEventListener("click", function(event) {
-  event.preventDefault();
-  leftArrow.style.opacity = "0.7"; // Example hover effect
+  // event.preventDefault();
   scrollLeft();
 });
 
-leftArrowContainer.addEventListener("mouseenter", function(event) {
-  event.preventDefault();
-  leftArrowContainer.style.opacity = "0.7"; // Example hover effect
-});
-
-leftArrowContainer.addEventListener("mouseleave", function(event) {
-  event.preventDefault();
-  leftArrowContainer.style.opacity = "0.4"; // Example hover effect
-});
 
 /*adding click event listener to DOM elements for nav*/
 // document.querySelector('#left-arrow').addEventListener('click', scrollLeft, function(event) {
 //   event.preventDefault(); 
 //   console.log('left arrow button clicked');
 // });
-
 
 /**** Important to note: javascript to load project html content is actually in-line with html so it will load when the project html file loads - DomParser does not bring over script tag content****
 document.querySelector('#project-button-core-values').addEventListener('click', function(event) {
