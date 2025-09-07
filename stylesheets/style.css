@@ -15,6 +15,7 @@ body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
+ 
 }
 
 h1,
@@ -191,6 +192,7 @@ button#left-arrow::after {
   text-align:left;
 }
 
+
 .page-heading {
   display: flex;
   flex-direction: column;
@@ -314,11 +316,11 @@ a.image-url {
 }
 
 #bg-image {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.2;
+    position: absolute;
+    top: 270px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
 }
 
 #bg-image::before {
@@ -332,7 +334,16 @@ a.image-url {
   position: absolute;
   top: 10%;
   left: 50%;
-  
+  animation: bg-animation 180s linear infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 #center-content {
@@ -385,13 +396,13 @@ button {
 }
 
 .timeline-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   padding-left: 50px;
   row-gap: 30px;
   justify-content: flex-start;
   flex: 0 0 100%;
-  width: 1100px;
+  width: 1100px; */
   padding-top: 30px;
 }
 
@@ -407,7 +418,7 @@ button {
 
 .timeline-content {
   color: #fff;
-  padding-top:20px;
+  padding-top:50px;
 }
 
 .timeline-content h2 {
@@ -435,24 +446,27 @@ button {
     opacity: 0.7;
 }
 
-.page-heading {
-  display: flex;
-  flex-direction: column;
-  /* height: 100vh; */
-  text-align: center;
-}
-
-.home-page-heading {
+.home-page-heading h1{
   padding: 0 15%;
+  margin-top:0px;
   text-align:center;
 }
 
 #center-content {
   text-align:center;
+  padding-top:90px;
 }
 
 .timeline-content{
-  padding:0 20%;
+  padding:20px 20%;
+}
+
+.timeline-about {
+  padding-top:0px;
+}
+
+.timeline-container {
+  padding-top: 50px;
 }
 
 .intro {
@@ -461,6 +475,7 @@ button {
   justify-self:center;
   max-width:90%;
 }
+
 .view-more-link span {
   font-size: 18em;
 }
